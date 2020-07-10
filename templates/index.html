@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en >
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+
+<body background="/static/1.jpg">
+	<h3 align="center">
+		<font color= white face="lato" size="17">
+			Amazon Review Page
+		</font>
+	</h3>
+	<br />
+	<h1 align="center">
+	<img src="/static/2.jpg" align="center" width="300" height="300"/>
+	</h1>
+	<h3 align="center">
+		<font color= white face="lato" size="4">
+			Type your review below :
+		</font>
+	</h3>
+	<form action = "review" method = 'POST'>
+			<h3 align="center">
+		<textarea rows=4 cols="50" name=area>
+		</textarea>
+		<br />
+				
+		    <input type="submit" onclick="alert('your response will be recorded')" value="Sumbit">
+		        
+      
+	</h3>
+	</form>
+
+	<div>
+	<h3 align="center">
+		<font color= black face="lato" size="17">
+			{{review}}
+		</font>
+	</h3>
+	</div>
+
+
+</body>
+</html>
