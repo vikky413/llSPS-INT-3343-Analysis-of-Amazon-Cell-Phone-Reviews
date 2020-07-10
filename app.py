@@ -4,6 +4,8 @@ import pickle
 from keras.models import load_model
 from sklearn.feature_extraction.text import CountVectorizer
 
+
+
 app = Flask(__name__)
 
 model = load_model('mymodel.h5')
@@ -15,9 +17,11 @@ def Predict(data):
     result = [Labels[i] for i in pred]
     return result
 
+
 @app.route('/' )
 def home():
    return render_template('index.html')
+
 
 @app.route('/review' , methods = ['POST'])
 def review():
@@ -29,6 +33,7 @@ def review():
     result = Predict(text)
     result = result[0]
     return render_template('answer.html', review = 'user has given {} star rating.'.format(result))
+
 
 print('hello')
 if __name__ == '__main__':
